@@ -1,0 +1,115 @@
+.maincalc{
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(2, 280px);
+    gap: 100px;
+}
+
+.maindivcalc{
+    top: 55px;
+    left: 100px;
+    position:absolute;
+    width:94%;
+    height:84vh;
+}
+
+label{
+    color: white;
+}
+
+input, label {
+    font-size: 25px;
+    display:block;
+}
+
+.range{
+    position: relative;
+    left: 5px;
+}
+
+#eroare{
+    color: red;
+    font-size: 1.2vw;
+}
+
+.textsum{
+    position: relative;
+    right: 20%;
+}
+
+.cec{
+    padding: 15px;
+    border-radius: 10px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    color: rgb(206, 206, 206);
+    width: 43vw;
+    background-color: #1c2530;
+    font-size: 1.8vw;
+    display: grid;
+    grid-template-columns: repeat(3, 240px);
+}
+
+.BCR{
+    padding: 15px;
+    color: rgb(206, 206, 206);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    border-radius: 10px;
+    width: 43vw;
+    background-color: #1c2530;
+    font-size: 1.8vw;
+    display: grid;
+    grid-template-columns: repeat(3, 240px);
+}
+
+@media (max-width: 750px){
+    .maincalc{
+        grid-template-columns: repeat(1, 150px);
+}
+.BCR{
+    grid-template-columns: repeat(1, 150px);
+}
+.cec{
+    grid-template-columns: repeat(1, 150px);
+}
+.textsum{
+    right: 0%;
+}
+}
+
+.banci{
+    padding: 10px;
+    width: 50vw;
+    background-color: red;
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+}
+
+.bcrimg{
+    width: 8.5vw;
+    border-radius: 10px;
+}
+
+.cecimg{
+    width: 8.5vw;
+    border-radius: 10px;
+}
+
+.brdimg{
+    width: 8.5vw;
+    height: 4vw;
+    border-radius: 10px;
+}
+
+.raiffimg{
+    width: 8.5vw;
+    border-radius: 10px;
+}
+
+.garantiimg{
+    width: 8.5vw;
+    height: 4vw;
+    border-radius: 10px;
+}

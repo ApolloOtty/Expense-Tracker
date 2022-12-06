@@ -1,0 +1,137 @@
+
+.grid{
+    right: 68px;
+    position: relative;
+    margin: 0 auto;
+    display:grid;
+    gap: 8rem;
+    justify-content: center;    
+    grid-template-columns: repeat(3, 280px);
+}
+
+
+.uppertext{
+    font-size: 30px;
+    font-weight: 500;
+    color: grey;
+}
+
+.history{
+    top: -8rem;
+    position: relative;
+    height: 1rem;
+    width: 73rem;
+    grid-column: span 3;
+}
+
+#recenttrans{
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+
+.item {
+    box-shadow: rgba(134, 134, 134, 0.137) 2px 15px 30px ;
+    font-weight: 500;
+    color: white;
+    width: 350px;
+    font-size: 35px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: #1c2530;
+}
+
+.apexcharts-tooltip span {
+    color: #ffffff;
+}
+
+.donut{
+    display: grid;
+    justify-content: center;
+}
+
+.moveup{
+    position: relative;
+    top: -4rem;
+}
+
+.item2{
+    border-radius: 15px;
+    background-color: #1c2530;
+    width: 400px;
+}
+
+.item3{
+    box-shadow: rgba(134, 134, 134, 0.137) 2px 15px 30px ;
+    border-radius: 15px;
+    background-color: #1c2530;
+    width: 760px;
+}
+
+.card-tall{
+    grid-column: span 2 / auto;
+}
+
+.iconmoney{
+    color: #37A5FA;
+}
+
+.iconspent{
+    color: rgb(246, 68, 68);
+}
+
+.iconincome{
+    color: rgb(76, 184, 76);
+}
+
+.maindashboard{
+    top: 50px;
+    left: 100px;
+    position:absolute;
+    width:94%;
+    height:80vh;
+    background-color: #13171C;
+}
+
+.money{
+    float: left;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #323d4b;
+}
+
+.butonlogin{
+    position: absolute;
+    left: 80vw;
+}
+
+@media (max-width: 750px){
+    .main{
+        height: 100%;
+    }
+    .grid{
+        gap: 3rem;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(1, 280px);
+    }
+    .item3{
+        width: 350px;
+    }
+    .history{
+        top: 0rem;
+        position: relative;
+        right: 27%;
+        left: -30%;
+        height: 25rem;
+        width: 30rem;
+        grid-column: span 1;
+    }
+    .moveup{
+        top: 0rem;
+    }
+}
