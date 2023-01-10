@@ -10,7 +10,7 @@ $data=json_decode(file_get_contents("php://input"));
 
 $user = $_POST['email'];
 $pass=$_POST['pass'];
-
+$passwordHash = password_hash($pass, PASSWORD_DEFAULT);
 $query = "SELECT * from user where email = '$user' limit 1";
 		$result = mysqli_query($con, $query);
     if($result)
@@ -26,7 +26,7 @@ $query = "SELECT * from user where email = '$user' limit 1";
 					}
 				}else{
 
-        $sql = "INSERT INTO user (email, password) VALUES ('$user','$pass')";
+        $sql = "INSERT INTO user (email, password) VALUES ('$user','$passwordHash')";
         mysqli_query($con, $sql);
                 }
             }

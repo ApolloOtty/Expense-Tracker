@@ -9,10 +9,11 @@ include("connection.php");
 $data=json_decode(file_get_contents("php://input"));
 
 $userID=$_POST['userID'];
+$date=$_POST['date'];
 //$user = $_POST['email'];
 $categories=array();
 
-$query = "SELECT transactions.categoryName, amount, type, date from transactions, categories where transactions.userID = '$userID' and transactions.categoryName = categories.categoryName and date BETWEEN (NOW() - INTERVAL 7 DAY) AND NOW() ORDER BY date DESC ";
+$query = "SELECT transactions.categoryName, amount, type, date from transactions, categories where transactions.userID = '$userID' and transactions.categoryName = categories.categoryName and DATE(date)='$date'  ORDER BY date DESC ";
 
 $result = mysqli_query($con, $query);
 
