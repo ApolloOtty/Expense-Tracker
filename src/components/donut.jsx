@@ -68,6 +68,7 @@ function Donut  () {
               },
             labels:category,
             legend: {
+                fontSize: '16px',
                 show: true,
                 position: 'bottom',
               },

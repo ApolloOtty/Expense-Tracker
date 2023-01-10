@@ -4,7 +4,8 @@ import Chart from 'react-apexcharts';
 import ReactApexChart from "react-apexcharts";
 import { ViewAgenda } from '@mui/icons-material';
 
-const Heatmap = () => {
+const Heatmap = () => {  
+
     const [category, setCategory] = useState([]);
     const [dataw1, setDataw1] = useState([]);
     const [dataw2, setDataw2] = useState([]);
@@ -67,6 +68,8 @@ const Heatmap = () => {
         })
     },[])
     console.log("lungime", dataw2.length)
+
+
     return(
         <div className='graph'>
         <Chart 
@@ -74,7 +77,7 @@ const Heatmap = () => {
         height= {350}
         
         series= {[
-            {
+        {
             name: '4th Week',
             data: dataw4
           },

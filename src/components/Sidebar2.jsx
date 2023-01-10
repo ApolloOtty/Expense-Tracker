@@ -26,6 +26,7 @@ import { red } from '@mui/material/colors';
 import { BorderColor } from '@mui/icons-material';
 import { useRef, useState, useContext} from 'react';
 import { FiSettings } from "react-icons/fi";
+import { CgProfile } from "react-icons/cg";
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -135,9 +136,9 @@ function MiniDrawer() {
       icon:<BiCalculator size={37}/>
     },
     {
-      name:"Settings",
+      name:"Profile",
       path:"/settings",
-      icon:<FiSettings size={37}/>
+      icon:<CgProfile size={37}/>
     }
   ]
 

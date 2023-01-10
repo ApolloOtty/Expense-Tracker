@@ -83,13 +83,41 @@ input[type="radio"]{
 
 .radio{
     display: grid;
-    justify-content: center;
+    position: absolute;
+    left: 20%;
 }
 
 .maintransinfo{
     display: grid;
     justify-content: center;
     gap: 10px;
+}
+
+.tabelcat{
+  box-shadow: rgba(35, 38, 78, 0.822) 5px 20px 18px ;
+  background-color: #323d4b;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  color: white;
+  width: 40%;
+  height: 80%;
+  vertical-align: middle;
+  text-align: center;
+  border: #808080 solid 2px;
+}
+
+.trcat{
+  position: absolute;
+  font-size: 2vw;
+  left: 33%;
+}
+
+.cattitle{
+  color: rgb(74, 76, 197);
+  top: 5%;
+  position: relative;
+  left: 64%;
 }
 
 .submit{
@@ -129,11 +157,24 @@ input[type="radio"]{
   height: 50px;
 }
 
+.create:hover{
+  background-color: rgb(130, 131, 243);
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+
+.submit:hover{
+  background-color: rgb(130, 131, 243);
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+
 .amount{
   position: relative;
   top: 10px;
   width: 300px;
   right: 3%;
+  border-radius: 10px;
 }
 
 .transtitle{
