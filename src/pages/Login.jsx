@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import videobg from '../components/videowall.mp4';
-import './login.css';
+import '../components/login.css';
 import { useRef, useState, useContext} from 'react';
 import AuthContext from './context/AuthProvider';
 import axios from '../api/axios.js';
@@ -22,6 +22,7 @@ const Login = () => {
 
     useEffect(() =>{
         localStorage.setItem('userID', userID);
+        localStorage.setItem('email', user);
         console.log(localStorage.getItem('userID'));
     },[userID])
 
@@ -66,7 +67,7 @@ const Login = () => {
             <p className='text2'>Blast off today and start tracking your expenses.</p>
             <form className='login' onSubmit={handleSubmit}>
             <h1>Let's Prepare For<br></br>Launch!</h1>
-            <input autocomplete="off" type="text" ref={userRef} placeholder="Enter Email" name="uname" required className='inputemail' onChange={(e) => setUser(e.target.value)} value={user}></input>
+            <input autocomplete="off" type="text" ref={userRef} placeholder="Enter Email" name="user" required className='inputemail' onChange={(e) => setUser(e.target.value)} value={user}></input>
             <input type="password" placeholder="Enter Password" name="pass" required className='inputemail'onChange={(e) => setPwd(e.target.value)} value={pwd}></input>
             <button class="button-64" role="button"><span class="logintext">Login</span></button>
             <p>Don't have an account?<a href="/signup"> Sign up</a></p>

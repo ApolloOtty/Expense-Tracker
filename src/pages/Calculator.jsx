@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Sidebar from '../components/Sidebar2';
-import './calculator.css';
+import '../components/calculator.css';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import Bank from "../components/Banks.jsx";
@@ -58,7 +58,7 @@ function Calculator() {
             suma[i]=Math.round((parseInt(initial)+(parseInt(perioada)*parseInt(lunar)))+(7.2/100)*(parseInt(initial)+(parseInt(perioada)*parseInt(lunar))));
             else if(i===0 && (perioada === 12 || perioada < 24))
             suma[i]=Math.round((parseInt(initial)+(parseInt(perioada)*parseInt(lunar)))+(8.2/100)*(parseInt(initial)+(parseInt(perioada)*parseInt(lunar))));
-            else if(i===0 &&( perioada === 24 || perioada <24))
+            else if(i===0 &&( perioada === 24 || perioada > 24))
             suma[i]=Math.round((parseInt(initial)+(parseInt(perioada)*parseInt(lunar)))+(8.45/100)*(parseInt(initial)+(parseInt(perioada)*parseInt(lunar))));
             else if(i===0 && perioada === 36)
             suma[i]=Math.round((parseInt(initial)+(parseInt(perioada)*parseInt(lunar)))+(8.7/100)*(parseInt(initial)+(parseInt(perioada)*parseInt(lunar))));
@@ -88,7 +88,7 @@ function Calculator() {
                 <Slider onChange={(e) => setPerioada(e.target.value)} defaultValue={1} aria-label="Default" min={1} max={36} valueLabelDisplay="auto" />
                 </Box>
                 </div>
-                <button onClick={onClickButton1}>Search</button>
+                <button onClick={onClickButton1} id="search">Search</button>
             </form>
             </div>
             <div className='gridBanci'>

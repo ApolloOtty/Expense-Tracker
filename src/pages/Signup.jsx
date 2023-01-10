@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import videobg from '../components/videowall.mp4';
-import './login.css';
+import '../components/login.css';
 import { useRef, useState, useContext} from 'react';
 import AuthContext from './context/AuthProvider';
 import axios from '../api/axios.js';

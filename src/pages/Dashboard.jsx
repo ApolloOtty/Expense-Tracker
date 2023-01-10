@@ -1,8 +1,7 @@
 import React from 'react';
-import Graph from './graph.jsx';
 import ReactApexChart from "react-apexcharts";
 import { useMediaQuery } from 'react-responsive'
-import './dashboard.css';
+import '../components/dashboard.css';
 import {
     FaMoneyBillAlt
 }from "react-icons/fa";
@@ -10,12 +9,16 @@ import {
 import Donut from "../components/donut.jsx";
 import Heatmap from "../components/heatmap.jsx";
 import Button from '@mui/material/Button';
-import ApexChart from "./graph.jsx";
 import Sidebar from '../components/Sidebar2';
 import './Login';
 import { useRef, useState, useContext} from 'react';
 import History from "../components/History.jsx";
 import { BsFillArrowDownCircleFill,BsFillArrowUpCircleFill } from "react-icons/bs";
+import axios from '../api/axios.js';
+import { useEffect } from 'react';
+import Percent from "../components/percent.jsx"
+
+
 
 
 const Dashboard = ({balance, expense, income}) => {
@@ -32,6 +35,7 @@ const Dashboard = ({balance, expense, income}) => {
     localStorage.setItem("balance", (parseInt(balance)+parseInt(income)-parseInt(expense)));
     console.log(localStorage.getItem("balance"))
     console.log(localStorage.getItem("userID"));
+
     return (
         <>
         { (localStorage.getItem("userID")==='0') ? (
@@ -66,11 +70,12 @@ const Dashboard = ({balance, expense, income}) => {
             <div className='item3 moveup'>
            <Heatmap></Heatmap>
             </div>
-            
+        
             <div className='history'>
             <h1 id='recenttrans'>Recent Transactions</h1>
             <History/>
             </div>
+            
         </div>
     </div>
     )};

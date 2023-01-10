@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from '../components/Sidebar2';
 import { useRef, useState, useContext, useEffect} from 'react';
-import './transactions.css';
+import '../components/transactions.css';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -12,6 +12,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { fontSize } from '@mui/system';
 import axios from '../api/axios.js';
+
 
 const Transcations = () => {
   console.log((localStorage.getItem("balance")));
@@ -45,7 +46,7 @@ const Transcations = () => {
   }else alert("Name can't be empty!")}
 
     const transactionCreate = async (e) => {
-      
+      if (localStorage.getItem("balance") - amount >= 0){
       e.preventDefault() 
       let fData=new FormData();
         fData.append('userID', localStorage.getItem("userID"));
@@ -72,6 +73,7 @@ const Transcations = () => {
             // I show error here        
           }});
       }else alert("Select a category!")//}else alert("You can't add an expense when your balance is 0! Add an income first")
+    }else alert("You don't have enough money in your account for this transaction!")
     }
 
 
@@ -90,6 +92,7 @@ const Transcations = () => {
 
     return (
       <>
+    
         <div className='main'>
             <div className='radio'>
             <Sidebar/>
@@ -152,7 +155,14 @@ const Transcations = () => {
               </form>
             </div>
         </div>
-       
+        <h1 className='cattitle'>Categories</h1>
+       <table className='tabelcat'>
+        <tr className='trcat'>
+        {val.map((cat) => (
+              <tr value={cat}>{cat}</tr>
+              ))}
+        </tr>
+       </table>
         </div>
         </>
     );
